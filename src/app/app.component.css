@@ -1,0 +1,71 @@
+.header {
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add-item-box {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.add-item-box input {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2rem;
+    margin-bottom: .5em;
+    border: solid 1px grey;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.add-item-box button {
+    width: 45%;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 2rem;
+    margin-bottom: .5em;
+    border: solid 1px grey;
+    border-radius: 1rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.red {
+    background-color: lightpink;
+}
+
+@media only screen and (min-width: 920px) {
+    .add-item-box {
+        width: 50%;
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+
+    .add-item-box input {
+        width: 100%;
+    }
+}
