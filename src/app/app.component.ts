@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ToDoItem } from 'src/models/ToDoItem';
+import { DataServiceService } from 'src/services/data-service.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,15 @@ export class AppComponent {
   newToDoItemDescription: string = '';
   toDoItems: ToDoItem[] = [];
 
+  constructor(private dataService: DataServiceService) { }
+
+  ngOnInit(): void {
+    if(this.dataService.getToDoItems())
+      this.toDoItems = this.dataService.getToDoItems();
+    else
+      this.toDoItems = [];
+  }
+
   addItem() {
     if(this.newToDoItemTitle != ''){
       var toDoItem: ToDoItem = new ToDoItem();
@@ -20,6 +30,9 @@ export class AppComponent {
 
       this.toDoItems.push(toDoItem);
       this.clearInputs();
+
+      this.dataService.setToDoItems(this.toDoItems);
+      this.ngOnInit();
     }
   }
 
