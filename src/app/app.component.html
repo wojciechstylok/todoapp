@@ -1,15 +1,39 @@
-<div class="header">
-  <h1>TODO App</h1>
-</div>
-<div class="add-item-box">
-  <div class="center">
-    <input type="text" placeholder="Title" />
+<div class="container">
+  <div class="header">
+    <h1>TODO App</h1>
   </div>
-  <div class="center">
-    <input type="text" placeholder="Description" />
+
+  <div class="add-item-box">
+    <div class="center">
+      <input type="text" 
+          placeholder="Title"
+          #toDoItemTitle
+          (input)="updateTitle(toDoItemTitle.value)"
+          [value]="newToDoItemTitle" />
+    </div>
+    <div class="err-message" *ngIf="newToDoItemTitle == ''">*Title is required</div>
+    <div class="center">
+      <input type="text" 
+          placeholder="Description" 
+          #toDoItemDescription
+          (input)="updateDescription(toDoItemDescription.value)"
+          [value]="newToDoItemDescription" />
+    </div>
+    <div class="buttons">
+      <button class="green" (click)="addItem()">Add</button>
+      <button class="red" (click)="clearInputs()">Cancel</button>
+    </div>
   </div>
-  <div class="buttons">
-    <button class="green">Add</button>
-    <button class="red">Cancel</button>
+
+  <div class="todoitems">
+    <div class="todoitem" *ngFor="let item of toDoItems">
+      <div class="deleteItem"
+          #deletingItem
+          (click)="deleteItem(item)">
+        X
+      </div>
+      <h3>{{item.title}}</h3>
+      <p>{{item.description}}</p>
+    </div>
   </div>
 </div>
