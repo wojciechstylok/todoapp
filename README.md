@@ -13,3 +13,5 @@ You can simply add or remove todo tasks to a list
 I'm gonna improve graphical design and will add possibility to store data
 
 *@update: design updated*
+
+*@update: storing data in local storage added*
