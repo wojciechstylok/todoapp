@@ -31,11 +31,6 @@ export class AppComponent {
     this.newToDoItemDescription = description;
   }
 
-  deleteItem(deletingItem: ToDoItem) {
-    var index = this.toDoItems.indexOf(deletingItem);
-    this.toDoItems.splice(index, 1);
-  }
-
   clearInputs() {
     this.newToDoItemTitle = '';
     this.newToDoItemDescription = '';

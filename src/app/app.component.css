@@ -107,40 +107,12 @@
     background-color: lightpink;
 }
 
-.todoitem {
-    display: block;
-    justify-content: center;
-    width: 70%;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin-right: auto;
-    margin-left: auto;
-    border: none;
-    border-radius: 1em;
-    padding: 1rem;
-    margin-bottom: 1em;
-    position: relative;
-    box-shadow: 0 0 1em grey;
-}
-
-.todoitem h3 {
-    padding-bottom: .2em;
-    border: none;
-    border-bottom: solid 1px lightgrey;
-}
-
 .todoitems {
     display: block;
     animation: headerLoad 1.5s forwards;
 }
 
-.deleteItem {
-    position: absolute;
-    right: 2em;
-    top: 2em;
-    cursor: pointer;
-}
-
-@media only screen and (min-width: 920px) {    
+@media only screen and (min-width: 920px) {
     .add-item-box {
         width: 50%;
         margin-left: 25vw;
@@ -159,29 +131,6 @@
         padding: 20px;
         display: flex;
         justify-content: space-around;
-    }
-/*
-    .green {
-        background-color: transparent;
-        transition: all 0.8s;
-    }
-
-    .green:hover {
-        background-color: lightgreen;
-    }
-    
-    .red {
-        background-color: transparent;
-        transition: all 0.8s;
-    }
-    
-    .red:hover {
-        background-color: lightpink;
-    }
-    */
-    .todoitem {
-        width: 50%;
-        margin-bottom: 2em;
     }
 }
 

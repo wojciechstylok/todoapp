@@ -1,0 +1,9 @@
+<div class="todoitem" *ngFor="let item of toDoItems">
+    <div class="deleteItem"
+        #deletingItem
+        (click)="deleteItem(item)">
+    X
+    </div>
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+</div>
