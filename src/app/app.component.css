@@ -1,3 +1,22 @@
+.bg-image {
+    position: absolute;
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-position-x: center;
+    background-position-y: 20%;
+}
+
+.container {
+    background-color: transparent;
+}
+
 .header {
     margin-top: 10vh;
     margin-left: auto;
@@ -7,12 +26,22 @@
     justify-content: center;
 }
 
+.header h1 {
+    animation: headerLoad 3.5s forwards;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    word-spacing: 1rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px white;
+}
+
 .add-item-box {
     display: block;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    animation: headerLoad 2s forwards;
 }
 
 .add-item-box input {
@@ -21,6 +50,7 @@
     margin-right: auto;
     line-height: 2rem;
     margin-bottom: .5em;
+    background-color: rgba(255, 255, 255, 0.7);
     border: solid 1px grey;
     border-radius: 1rem;
     padding-left: 1rem;
@@ -42,6 +72,7 @@
     border-radius: 1rem;
     height: 2rem;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .add-item-box .err-message {
@@ -59,29 +90,47 @@
 }
 
 .green {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.8s;
+}
+
+.green:hover {
     background-color: lightgreen;
 }
 
 .red {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.8s;
+}
+
+.red:hover {
     background-color: lightpink;
 }
 
 .todoitem {
-    border: none;
-    border-bottom: solid 1px lightgrey;
     display: block;
     justify-content: center;
     width: 70%;
-    background-color: none;
+    background-color: rgba(255, 255, 255, 0.7);
     margin-right: auto;
     margin-left: auto;
+    border: none;
+    border-radius: 1em;
     padding: 1rem;
     margin-bottom: 1em;
     position: relative;
+    box-shadow: 0 0 1em grey;
+}
+
+.todoitem h3 {
+    padding-bottom: .2em;
+    border: none;
+    border-bottom: solid 1px lightgrey;
 }
 
 .todoitems {
     display: block;
+    animation: headerLoad 1.5s forwards;
 }
 
 .deleteItem {
@@ -102,8 +151,46 @@
         width: 100%;
     }
     
+    .add-item-box button {
+        width: 30%;
+    }
+
+    .buttons {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+/*
+    .green {
+        background-color: transparent;
+        transition: all 0.8s;
+    }
+
+    .green:hover {
+        background-color: lightgreen;
+    }
+    
+    .red {
+        background-color: transparent;
+        transition: all 0.8s;
+    }
+    
+    .red:hover {
+        background-color: lightpink;
+    }
+    */
     .todoitem {
         width: 50%;
         margin-bottom: 2em;
     }
+}
+
+
+@keyframes headerLoad {
+    from {
+                transform: translateY(-120px);
+      }
+      to {
+                transform: translateY(0);
+      }
 }
