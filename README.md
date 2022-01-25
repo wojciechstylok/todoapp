@@ -1,4 +1,4 @@
-# Todoapp
+# ToDo App
 
 This project was made to practise Angular skills
 
